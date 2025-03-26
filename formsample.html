@@ -1,0 +1,61 @@
+
+<html>
+    <hrad>
+        <title>formsample</title>
+        <style>
+            form {
+                display: inline-block;
+                color:chartreuse;
+            }
+            input {
+                display: inline-block;
+                background-color: red;
+                color: rgb(212, 248, 6);
+            }
+            h2 {
+                color: blue;
+            }
+            label {
+                color: green;
+            }
+            option {
+                color: yellow;
+            }
+        </style>
+    </hrad>
+    <body>
+        <h2>text button</h2>
+        <form for="fname">First name:</form>
+        <input type="text" id="fname" name="fname" value="John">
+        <h2>radio button</h2>
+        <input type="radio" id="html" name="fav_language" value="html">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="css">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="javascript">
+        <label for="javascript">JavaScript</label><br>
+        <h2>checkbox</h2>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">  
+        <label for="vehicle1"> I have a bike</label><br>    
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+        <h2>dropdown</h2>
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+          <h2>action</h2>
+
+          <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+    </body>
+</html>

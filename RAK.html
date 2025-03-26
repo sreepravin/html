@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Market</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .search-icon {
+            float: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: green;
+        }
+        .vegetable {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .vegetable img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .vegetable-info {
+            flex: 1;
+        }
+        .vegetable-info h2 {
+            margin: 0;
+            color: #333;
+        }
+        .vegetable-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .vegetable-info .price {
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#title">Title</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+        <a href="#search" class="search-icon">🔍</a>
+    </div>
+    <div class="container">
+        <h1>Vegetable Market</h1>
+        <div class="vegetable">
+            <img src="carrot.jpg" alt="Carrot">
+            <div class="vegetable-info">
+                <h2>Carrot</h2>
+                <p>Carrots are a root vegetable that are often claimed to be the perfect health food.</p>
+                <p class="price">Price: $2.00 per lb</p>
+            </div>
+        </div>
+        <div class="vegetable">
+            <img src="broccoli.jpg" alt="Broccoli">
+            <div class="vegetable-info">
+                <h2>Broccoli</h2>
+                <p>Broccoli is a cruciferous vegetable that is a nutritional powerhouse.</p>
+                <p class="price">Price: $1.50 per lb</p>
+            </div>
+        </div>
+        <div class="vegetable">
+            <img src="spinach.jpg" alt="Spinach">
+            <div class="vegetable-info">
+                <h2>Spinach</h2>
+                <p>Spinach is a leafy green vegetable that is rich in iron, vitamins, and minerals.</p>
+                <p class="price">Price: $3.00 per lb</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

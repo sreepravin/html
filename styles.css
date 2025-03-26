@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('tenor.gif');
+    background-size: cover;
+}
+
+h1 {
+    color: #1af906;
+}
+
+.vegetable {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.vegetable img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.details {
+    text-align: left;
+}
+
+.details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.details input {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.details button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.details button:hover {
+    background-color: #218838;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1af906;
+}   
