@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>change buuton color</title>
+        <style>
+            body{
+                background-image: url('sung-jin-woo-solo-leveling.gif');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            button{
+                font-size: 30px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+        </style>
+        <script>
+            function colour(){
+                var button=document.getElementById("c");
+                if (button.style.backgroundColor=="aquamarine"){
+                    button.style.backgroundColor="orange";
+                }
+                else{
+                    button.style.backgroundColor="aquamarine";
+                    button.style.color="violet";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <button style="background-color: aquamarine; color: rgb(251, 7, 251); " onclick="colour()" id="c">change colour</button>
+    </body>
+</html>

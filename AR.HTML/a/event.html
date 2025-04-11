@@ -10,7 +10,7 @@
             <input type="number" id="f2" name="f2"><br><br>
         </form>
         <h1 id="sum1">sum of two number</h1> 
-        <button type="button" onclick="sum()">sum!</button> 
+        <button type="button" onmouseover="mouse(this)" onclick="sum()">sum!</button> 
         <script>
             function sum(){
             var n1=Number( document.getElementById("f1").value);
@@ -18,6 +18,10 @@
             var sum2=n1+n2;
             
                 document.getElementById("sum1").innerHTML="sum of two number is: "+sum2;
+            }
+            function mouse(x){
+                x.style.color="red";
+                x.style.background="blue";
             }
 
 

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Guess the Number</title> 
+    </head>
+    <body>
+        <h1>Guess the Number :</h1>
+        <label for="guess">Enter your guess:</label>
+        <input type="number" id="guess" name="guess"><br><br>
+        <button type="button" onclick="checkGuess()">Check Guess</button><br><br>
+        <h2 id="result"></h2>
+        <h2 id="score"></h2>
+        <script>
+        var r=Math.floor(Math.random()*10)+1;
+        var score=10;
+        function checkGuess() {
+            var r=Math.floor(Math.random()*10)+1;
+            var g=parseInt(document.getElementById("guess").value)||0;
+            document.getElementById("score").innerHTML = "Your score is: " + score; 
+            if (g===r) {
+                document.getElementById("result").innerHTML = "you guessed it right!";
+                score=score+1;
+                document.getElementById("score").innerHTML = "Your score is: " + score;
+            }
+            else{
+                document.getElementById("result").innerHTML = "try again! the currect number is: " + r;
+                score=score-1;
+                document.getElementById("score").innerHTML = "Your score is: " + score;
+            }
+        }
+        </script>
+    </body>
+</html>
