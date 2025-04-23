@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <style>
+        body {
+            background-image: url('Madrasapattinam.jpg');
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-color: cadetblue;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            color: #ed052c;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .seat-selection {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .seat {
+            width: 40px;
+            height: 40px;
+            background-color: #ddd;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .seat.selected {
+            background-color: #6c5ce7;
+            color: white;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #74b9ff;
+        }
+        .ticket {
+            margin-top: 20px;
+            padding: 10px;
+            border: 4px solid #0e0ee4;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="actor.html" class="button">Go to Actor Page</a>
+    <div class="container">
+        <h1>Movie Seat Booking</h1>
+        <p><strong>Movie:</strong> Madrasapattinam</p>
+        <p><strong>Date:</strong> <span id="date"></span></p>
+        <p><strong>Time:</strong> 12:30 PM</p>
+
+        <h3>Select a Seat:</h3>
+        <div class="seat-selection" id="seatSelection">
+            <!-- Seats will be dynamically generated -->
+        </div>
+
+        <button class="button" id="bookButton">Book</button>
+
+        <div class="ticket" id="ticket">
+            <h3>Ticket Details</h3>
+            <p><strong>Movie:</strong> jackson durai</p>
+            <p><strong>Seat:</strong> <span id="selectedSeat"></span></p>
+            <p><strong>Date:</strong> <span id="ticketDate"></span></p>
+            <p><strong>Time:</strong> 12:30 PM</p>
+        </div>
+    </div>
+
+    <script>
+        const seatSelection = document.getElementById('seatSelection');
+        const bookButton = document.getElementById('bookButton');
+        const ticket = document.getElementById('ticket');
+        const selectedSeatSpan = document.getElementById('selectedSeat');
+        const ticketDateSpan = document.getElementById('ticketDate');
+        const dateSpan = document.getElementById('date');
+
+        // Generate seats
+        for (let i = 1; i <= 30; i++) {
+            const seat = document.createElement('div');
+            seat.classList.add('seat');
+            seat.textContent = i;
+            seat.addEventListener('click', () => {
+                document.querySelectorAll('.seat').forEach(s => s.classList.remove('selected'));
+                seat.classList.add('selected');
+            });
+            seatSelection.appendChild(seat);
+        }
+
+        // Set current date
+        const currentDate = new Date().toLocaleDateString();
+        dateSpan.textContent = currentDate;
+
+        // Book button click event
+        bookButton.addEventListener('click', () => {
+            const selectedSeat = document.querySelector('.seat.selected');
+            if (selectedSeat) {
+                selectedSeatSpan.textContent = selectedSeat.textContent;
+                ticketDateSpan.textContent = currentDate;
+                ticket.style.display = 'block';
+            } else {
+                alert('Please select a seat before booking.');
+            }
+        });
+    </script>
+</body>
+</html>

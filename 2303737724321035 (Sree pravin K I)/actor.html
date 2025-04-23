@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .film-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .film {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .film img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .film h3 {
+            margin: 10px 0;
+        }
+        .film p {
+            font-size: 14px;
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        .language-options {
+            margin-top: 20px;
+        }
+        .language-options select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function changeLanguage() {
+            const language = document.getElementById('languageSelect').value;
+            alert('Language changed to: ' + language);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cinema World</h1>
+        <button onclick="window.location.href='login_page.html'" style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Return to Login Page
+        </button>
+    </header>
+    <div class="container">
+        <section class="film-details">
+            <div class="film">
+                <a href="sar.html" target="_blank">
+                    <img src="OIP.jpeg" alt="sarpatta movie">
+                </a>
+                <h3>sarpatta </h3>
+                <p>Genre: Action</p>
+                <p>Duration: 120 mins</p>
+                <p>Sarpatta is a gripping tale set in the 1970s that delves into the world of boxing, showcasing the cultural and political backdrop of the time. It highlights the struggles, triumphs, and the spirit of perseverance.</p>
+            </div>
+            <div class="film">
+                <a href="thanali.html" target="_blank">
+                    <img src="OIP (1).jpeg" alt="thenaliraman movie">
+                </a>
+                <h3>thenaliraman </h3>
+                <p>Genre: Comedy</p>
+                <p>Duration:140 mins</p>
+                <p>Thenaliraman is a humorous tale that revolves around the witty and clever minister of a kingdom, showcasing his adventures and problem-solving skills with a touch of satire and comedy.</p>
+            </div>
+            <div class="film">
+                <a href="jack_d.html" target="_blank">
+                    <img src="jackson-durai-20150713120701-14318.jpg" alt="jackson durai movie">
+                </a>
+                <h3>jackson durai </h3>
+                <p>Genre: Thriller</p>
+                <p>Duration: 130 mins</p>
+                <p>Jackson Durai is a thrilling horror-comedy that follows the story of a police officer who investigates a haunted house, blending elements of suspense, humor, and supernatural occurrences.</p>
+            </div>
+            <div class="film">
+                <a href="mad.html" target="_blank">
+                    <img src="Madrasapattinam.jpg" alt="madrasapattinam movie">
+                </a>
+                <h3>madrasapattinam </h3>
+                <p>Genre: Love</p>
+                <p>Duration: 150 mins</p>
+                <p>Madrasapattinam is a poignant love story set against the backdrop of pre-independence India, exploring the romance between a British woman and an Indian man, highlighting cultural contrasts and emotional depth.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Film Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Film</th>
+                        <th>Showtime</th>
+                        <th>Screen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sarpatta</td>
+                        <td>10:00 AM</td>
+                        <td>Screen 1</td>
+                    </tr>
+                    <tr>
+                        <td>thenaliraman</td>
+                        <td>10:00 PM</td>
+                        <td>Screen 2</td>
+                    </tr>
+                    <tr>
+                        <td>jackson durai</td>
+                        <td>12:30 PM</td>
+                        <td>Screen 1</td>
+                    </tr>
+                    <tr>
+                        <td>madrasapattinam</td>
+                        <td>12:30 PM</td>
+                        <td>Screen 2</td>
+                </tbody>
+            </table>
+        </section>
+        <section class="language-options">
+            <h2>Select Language</h2>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="Tamil">Tamil</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+            </select>
+        </section>
+    </div>
+    
+</body>
+</html>
