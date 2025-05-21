@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>js object constructor</title>
+    </head>
+    <body>
+        <h1>java script constructor</h1>
+        <h2 id="demo"></h2>
+        <script>
+            function famalyd (name,age,eye){
+                this.name = name;
+                this.age = age;
+                this.eye = eye;
+            }
+            const father=new famalyd("vinoth",45,"black");
+            const mother=new famalyd("kalimuthu",40,"black");
+            document.getElementById("demo").innerHTML = father.age + " " + father.name + " " + father.eye + "<br>" ;
+        </script>
+    </body>
+</html>

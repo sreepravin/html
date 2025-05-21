@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="notsstyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <title>nots web app</title>
+    </head>
+        <h1 class="font-effect-Fire" id="head">notes web app</h1>
+        <div class="head">
+        <div id="t">
+            <p>this web site is used to stour your study notes</p>
+            <button onclick="text()">add your nots</button>
+        </div>
+        <div id="a">
+            <h2 class="font-effect-Fire">Enter your nots </h2><br>
+            <input type="text" id="getnots" name="getnotes">
+            <button onclick="addtext_conent()"> add</button>
+        </div>
+        </div>
+        <section>
+            <script>
+                function text() {
+                    document.querySelector('#a').style.display = 'block';
+                    document.querySelector('#t').style.display='none';
+
+                }
+                function addtext_conent(){   
+                    var cont=document.getElementById('getnots').value;
+                    if(cont==''){
+                        alert('please enter your nots');
+                        return;
+                    }
+
+                    document.querySelector('#a').style.display="none";
+                    document.querySelector('#t').style.display="block";
+
+                    var but=document.createElement("button");
+                    but.name='delete';
+
+                    var add=document.createElement("div");
+                    add.textContent = cont;
+
+                    add.appendChild(but);
+                    but.textContent='delete';
+
+                    document.querySelector('.head').appendChild(add);
+                    document.getElementById('getnots').value='';
+                    but.onclick=function(){
+                        document.querySelector('.head').removeChild(add);
+                    }
+                }
+            </script>
+        </section>
+    </body>
+</html>    

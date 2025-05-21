@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+    border: 10px solid rgb(210, 193, 8);
+    background-color: rgb(18, 17, 17);
+    padding: 20px;
+    border-radius: 40px;
+    margin: 20px;
+    display: inline-flexbox;
+}
+body{
+    background-color: lightblue;
+    font-family: "Sofia", sans-serif;
+}
+.head div{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(23, 22, 21);
+    border-radius: 40px;
+    color: white;
+    border: 10px solid rgb(210, 193, 8);
+    display: flex;
+    flex-wrap: wrap;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#t{
+    display: block;
+    text-shadow: 14px 4px 4px rgb(231, 125, 169);
+    color: #f501bc;
+}
+#a{
+    display: none;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(210, 193, 8);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
